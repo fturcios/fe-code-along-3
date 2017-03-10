@@ -1,0 +1,73 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script|Elsie+Swash+Caps');
+</style>
+
+/* this is how to comment in css */
+
+/* can also
+comment multiline */
+
+/* CSS syntax
+made up of:
+
+selector {
+  property: value;
+  property: value; (always ends with semicolon)
+}
+*/
+
+/* type selector */
+
+p { /* will select all <p> elements */
+  font-size: 1em; /* can be set in pixels, ?pt(not browser-versal), % (relative to above sizes), or iem(best for responsive design- can calculate by divding px by 16) */
+  line-height: 1.5em;
+}
+
+figcaption {
+  /*font-weight: normal;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  font-family: Georgia, "New Times Roman", serif;*/
+  /* can just use font: to do all the above in order*/
+  font: normal 0.75em/1.5em "Elsie Swash Caps", cursive;
+  color: #777; /*can use 16 basic color words or hex code or rgba 4 digits. hex code = red|gre|bl*/
+  text-align: right;
+}
+
+/* class selector (applied to as many elements as i like-- allows you to pick/choose whats affected) */
+
+.milk-text { /* elements w class="milk-text" go HERE (indicated by . in front) */
+  font: bold 2.6em "Elsie Swash Caps", cursive;
+  color: white;
+  text-shadow: 0 2px 3px #0000000;
+}
+
+/* ID selector (can only apply to 1 unique element per page vs. class which can apply to multiple on 1 page) indicated by # in front */
+#logo {
+  background-color: aqua;
+}
+
+/* descendent selector - when you want eg 1 h1/h2 to be diff than all others on page*/
+#logo h1 {/* whill only style h1s if their inside the logo id*/
+  font-family: "Clicker Script", cursive;
+}
+
+#logo h2 {
+  font-family: "Elsie Swash Caps";
+}
+
+/* psuedo selector - essentially will only affect states (ie links) of items*/
+/* so #details a: are descendant and :link are psuedo */
+#details a:link, #details a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#details a:hover {
+color: black;
+text-decoration: underline;
+}
+
+#details a:active {
+  color: red;
+}
